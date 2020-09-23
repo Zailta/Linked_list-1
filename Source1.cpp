@@ -1,3 +1,9 @@
-#include<conio.h>
-using namespace std;
 #include <bits/stdc++.h>
+using namespace std;
+
+
+class Node {
+public:
+    int data;
+    Node* next;
+};
