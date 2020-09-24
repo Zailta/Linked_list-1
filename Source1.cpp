@@ -64,3 +64,17 @@ void Delete_end(Node** start) {
     delete ptr;
     return;
 }
+void Delete_after(Node** start, int value) {
+    Node* ptr, * preptr;
+    ptr = *start;
+    preptr = ptr;
+    while (preptr->data != value) {
+        preptr = ptr;
+        ptr = ptr->next;
+    }
+    preptr->next = ptr->next;
+    if (ptr == *start)
+        *start = preptr->next;
+    delete ptr;
+    return;
+}
