@@ -87,3 +87,22 @@ void Print(Node** start) {
     }
     return;
 }
+
+int main() {
+    Node* head = NULL;
+    Create(&head, 7);
+    Create(&head, 6);
+    Create(&head, 9);
+    Create(&head, 10);
+    Create(&head, 15);
+    Create(&head, 200);
+    Create(&head, 500);
+    Create(&head, 66);
+    Create(&head, 88);
+    Insert_beg(&head, 100);
+    Insert_end(&head, 600);
+    Delete_beg(&head);
+    Delete_end(&head);
+    Delete_after(&head, 200);
+    Print(&head);
+}
