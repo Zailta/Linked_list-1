@@ -43,3 +43,24 @@ void Insert_end(Node** start, int new_data) {
     new_node->next = *start;
     return;
 }
+void Delete_beg(Node** start) {
+    Node* ptr;
+    ptr = *start;
+    while (ptr->next != *start)
+        ptr = ptr->next;
+    ptr->next = (*start)->next;
+    delete (*start);
+    *start = ptr->next;
+    return;
+}
+void Delete_end(Node** start) {
+    Node* ptr, * preptr;
+    ptr = *start;
+    while (ptr->next != *start) {
+        preptr = ptr;
+        ptr = ptr->next;
+    }
+    preptr->next = ptr->next;
+    delete ptr;
+    return;
+}
