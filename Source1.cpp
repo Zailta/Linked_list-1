@@ -78,3 +78,12 @@ void Delete_after(Node** start, int value) {
     delete ptr;
     return;
 }
+void Print(Node** start) {
+    Node* ptr;
+    ptr = *start;
+    while (ptr->next != *start) {
+        cout << ptr->data;
+        ptr = ptr->next;
+    }
+    return;
+}
