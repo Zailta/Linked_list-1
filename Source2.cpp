@@ -15,4 +15,15 @@ void Create(Node** start, int new_data) {
         new_node->next = NULL;
         *start = new_node;
 
-    }
+    }    ptr = *start;
+    while (ptr->next != NULL)
+        ptr = ptr->next;
+    ptr->next = new_node;
+    new_node->prev = ptr;
+    new_node->next = NULL;
+
+}
+int main() {
+    Node* head = NULL;
+    Create(&head, 5);
+}
