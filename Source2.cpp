@@ -88,6 +88,17 @@ void Delete_beg(Node** start) {
 
     return;
 }
+void Delete_end(Node** start) {
+    Node* ptr;
+    ptr = (*start);
+    while (ptr->next != NULL) {
+        ptr = ptr->next;
+    }
+    (ptr->prev)->next = NULL;
+    delete ptr;
+
+    return;
+}
 void Print(Node** start) {
     Node* ptr;
     ptr = *start;
