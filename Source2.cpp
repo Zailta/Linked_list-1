@@ -59,6 +59,8 @@ int main() {
     Create(&head, 10);
     Create(&head, 15);
     Create(&head, 20);
+    Insert_beg(&head, 100);
+    Insert_end(&head, 600);
 
     Print(&head);
 }
