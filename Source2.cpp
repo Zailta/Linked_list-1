@@ -144,6 +144,11 @@ int main() {
     Create(&head, 20);
     Insert_beg(&head, 100);
     Insert_end(&head, 600);
-
+    Insert_before(&head, 200, 5);
+    Insert_after(&head, 300, 200);
+    Delete_beg(&head);
+    Delete_end(&head);
+    Delete_before(&head, 15);
+    Delete_after(&head, 200);
     Print(&head);
 }
