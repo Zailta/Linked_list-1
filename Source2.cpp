@@ -23,6 +23,15 @@ void Create(Node** start, int new_data) {
     new_node->next = NULL;
 
 }
+void Insert_beg(Node** start, int new_data) {
+    Node* new_node = new Node();
+    (*start)->prev = new_node;
+    new_node->next = *start;
+    new_node->prev = NULL;
+    *start = new_node;
+    new_node->data = new_data;
+    return;
+}
 void Print(Node** start) {
     Node* ptr;
     ptr = *start;
