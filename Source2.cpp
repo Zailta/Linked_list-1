@@ -99,6 +99,20 @@ void Delete_end(Node** start) {
 
     return;
 }
+void Delete_before(Node** start, int value) {
+    Node* ptr, * temp;
+    ptr = *start;
+    while (ptr->data != value) {
+        ptr = ptr->next;
+    }
+    temp = ptr->prev;
+    ptr->prev = temp->prev;
+    (temp->prev)->next = ptr;
+
+    delete temp;
+
+    return;
+}
 void Print(Node** start) {
     Node* ptr;
     ptr = *start;
