@@ -23,7 +23,21 @@ void Create(Node** start, int new_data) {
     new_node->next = NULL;
 
 }
+void Print(Node** start) {
+    Node* ptr;
+    ptr = *start;
+    while (ptr != NULL) {
+        cout << "\t" << ptr->data;
+        ptr = ptr->next;
+    }
+    return;
+}
 int main() {
     Node* head = NULL;
     Create(&head, 5);
+    Create(&head, 10);
+    Create(&head, 15);
+    Create(&head, 20);
+
+    Print(&head);
 }
