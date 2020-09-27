@@ -79,6 +79,15 @@ void Insert_after(Node** start, int new_data, int value) {
     return;
 
 }
+void Delete_beg(Node** start) {
+    Node* ptr;
+    ptr = *start;
+    *start = (*start)->next;
+    (*start)->prev = NULL;
+    delete ptr;
+
+    return;
+}
 void Print(Node** start) {
     Node* ptr;
     ptr = *start;
