@@ -61,6 +61,24 @@ void Insert_before(Node** start, int new_data, int value) {
     return;
 
 }
+void Insert_after(Node** start, int new_data, int value) {
+    Node* ptr;
+    Node* new_node = new Node();
+    new_node->data = new_data;
+    ptr = *start;
+
+    while (ptr->data != value) {
+        ptr = ptr->next;
+    }
+    new_node->next = ptr->next;
+    (ptr->next)->prev = new_node;
+    ptr->next = new_node;
+    new_node->prev = ptr;
+
+
+    return;
+
+}
 void Print(Node** start) {
     Node* ptr;
     ptr = *start;
